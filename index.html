@@ -134,7 +134,22 @@
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
     <script src="assets/js/main.js"></script>
+   <script>
+    document.getElementById('downloadButton').addEventListener('click', function() {
+    console.log("Download button clicked"); // Debugging line
+    const fileUrl = 'registrationFile.pdf'; // Ensure correct path
+    const fileName = 'registration_form.pdf';
 
+    const a = document.createElement('a');
+    a.href = fileUrl;
+    a.download = fileName;
+
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+});
+
+   </script>
    
 </body>
 

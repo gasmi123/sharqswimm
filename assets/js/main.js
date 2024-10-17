@@ -72,20 +72,5 @@ scrollLinks.forEach((scrollLink) => {
 /* Ref: https://github.com/cferdinandi/gumshoe  */
 
 // Initialize Gumshoe
-var spy = new Gumshoe('#navbar-collapse .nav-link', {
-	offset: 60
-});
 
-    document.getElementById('downloadButton').addEventListener('click', function() {
-      const fileUrl = 'files/regestrationFile.pdf'; // Update the file path here
-      const fileName = 'registration_form.pdf';
-
-      const a = document.createElement('a');
-      a.href = fileUrl;
-      a.download = fileName;
-
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-    });
   

@@ -19,6 +19,8 @@
     
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+
+   
 </head>
 
 <body dir="rtl">
@@ -60,7 +62,7 @@
                     <div class="item-content container">
                         <div class="item-content-inner">
                             <h2 class="heading">مرحباً بكم في <hr><br class="d-none d-md-block"> نادي القرش للباحة المسيلة</h2>
-                            <a class="btn btn-primary btn-cta" href="#" target="_blank">سجل الان</a>
+                            <a class="btn btn-primary btn-cta" href="#pricing" target="_blank">سجل الان</a>
                         </div><!--//item-content-inner-->
                     </div><!--//item-content-->
                 </div><!--//item-->
@@ -106,17 +108,17 @@
         </div><!--//container-->
     </div><!--//team-section-->
 
+    
+    
     <div id="pricing" class="pricing-section">
         <div class="container text-center">
             <h2 class="section-title">تحميل استمارة تسجيل</h2>
             <div class="download-container">
-                <button class="download-button" id="downloadButton">تحميل</button>
-              </div>
-            <div class="pricing-wrapper row">
-                <!-- Pricing items go here -->
-            </div><!--//pricing-wrapper-->
-        </div><!--//container-->
-    </div><!--//pricing-section-->
+                <button class="download-button btn btn-primary"  onclick="downloadFile()" id="downloadButton">تحميل</button>
+            </div>
+        </div>
+    </div>
+    
 
     <div id="contact" class="contact-section">
         <div class="container text-center">
@@ -133,23 +135,30 @@
     <!-- Javascript -->
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script>
+        function downloadFile() {
+            // Path to the file
+            const fileUrl = 'files/reg.pdf'; // Path to your PDF file
+            
+            // Create a new link element
+            const a = document.createElement('a');
+            a.href = fileUrl;
+            
+            // Set the download attribute to the file name (optional)
+            a.download = 'files/reg.pdf';
+            
+            // Append the link to the body
+            document.body.appendChild(a);
+            
+            // Programmatically trigger a click on the link to download the file
+            a.click();
+            
+            // Remove the link after triggering the download
+            document.body.removeChild(a);
+        }
+    </script>
     <script src="assets/js/main.js"></script>
-   <script>
-    document.getElementById('downloadButton').addEventListener('click', function() {
-    console.log("Download button clicked"); // Debugging line
-    const fileUrl = 'registrationFile.pdf'; // Ensure correct path
-    const fileName = 'registration_form.pdf';
-
-    const a = document.createElement('a');
-    a.href = fileUrl;
-    a.download = fileName;
-
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-});
-
-   </script>
+  
    
 </body>
 

@@ -377,7 +377,7 @@ a:focus {
   background-position: center center;
 }
   .hero-carousel .carousel-inner .item-1 {
-    background-image: url("../images/swimmbg.jpg");
+    background-image: url("https://img.freepik.com/free-photo/photo-modern-indoor-swimming-pool_23-2148326873.jpg?t=st=1729151866~exp=1729155466~hmac=199a87d6ed5d74bd7bc167f21ed871c46a46473178dcd319fa9a2251d0afe232&w=740");
     background-size: cover; /* Scales the image to cover the entire container */
     background-position: center; /* Ensures the background image is centered */
     background-repeat: no-repeat; /* Prevents the image from repeating */
